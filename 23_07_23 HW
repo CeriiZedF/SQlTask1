@@ -34,3 +34,8 @@ FROM Product
 WHERE price < 50 AND date_of_delivery BETWEEN '2023-05-01' AND CONVERT(date, DATEADD(Day, -1, GETDATE()))
 
 8.
+SELECT *
+FROM Product 
+WHERE category = 'Посуд' AND quantity > 50
+
+9.
