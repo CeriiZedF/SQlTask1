@@ -7,3 +7,11 @@ WHERE name LIKE '%Молоко%' OR name LIKE '%Желе%'
 SELECT *
 FROM Product 
 WHERE date_of_delivery = CONVERT(date, GETDATE()) OR date_of_delivery = CONVERT(date, DATEADD(Day, -1, GETDATE()))  AND quantity > 10
+
+3.
+SELECT name, price
+FROM Product 
+WHERE 12 = DATEPART(MONTH, date_of_delivery)
+
+
+4.
