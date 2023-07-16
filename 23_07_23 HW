@@ -32,3 +32,5 @@ WHERE name LIKE '[в-л]%'
 SELECT *
 FROM Product 
 WHERE price < 50 AND date_of_delivery BETWEEN '2023-05-01' AND CONVERT(date, DATEADD(Day, -1, GETDATE()))
+
+8.
