@@ -39,3 +39,9 @@ FROM Product
 WHERE category = 'Посуд' AND quantity > 50
 
 9.
+SELECT *
+FROM Product 
+WHERE price BETWEEN 100 AND 200 
+ORDER BY price 
+
+10.
