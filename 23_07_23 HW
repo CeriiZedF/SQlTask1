@@ -1,1 +1,9 @@
+1. 
+SELECT price * quantity * (1 - (discount / 100)) AS 'Выручка'
+FROM Product 
+WHERE name LIKE '%Молоко%' OR name LIKE '%Желе%'
 
+2.
+SELECT *
+FROM Product 
+WHERE date_of_delivery = CONVERT(date, GETDATE()) OR date_of_delivery = CONVERT(date, DATEADD(Day, -1, GETDATE()))  AND quantity > 10
