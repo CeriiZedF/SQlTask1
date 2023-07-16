@@ -45,3 +45,6 @@ WHERE price BETWEEN 100 AND 200
 ORDER BY price 
 
 10.
+UPDATE Product SET price = (price * 0.95)
+
+11.
