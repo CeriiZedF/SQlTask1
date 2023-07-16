@@ -19,3 +19,8 @@ FROM Product
 WHERE category = 'Снеки' AND producer NOT LIKE '%Flint%'
 
 5.
+SELECT name, price
+FROM Product 
+WHERE name LIKE 'К%' AND category LIKE '%А%'
+
+6.
