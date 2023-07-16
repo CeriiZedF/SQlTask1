@@ -13,5 +13,9 @@ SELECT name, price
 FROM Product 
 WHERE 12 = DATEPART(MONTH, date_of_delivery)
 
-
 4.
+SELECT name, price
+FROM Product 
+WHERE category = 'Снеки' AND producer NOT LIKE '%Flint%'
+
+5.
