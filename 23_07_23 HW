@@ -24,3 +24,8 @@ FROM Product
 WHERE name LIKE 'К%' AND category LIKE '%А%'
 
 6.
+SELECT *
+FROM Product 
+WHERE name LIKE '[в-л]%'
+
+7.
