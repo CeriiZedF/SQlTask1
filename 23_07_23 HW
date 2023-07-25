@@ -68,3 +68,8 @@ DELETE Product
 WHERE date_of_delivery > CONVERT(date, DATEADD(MONTH, -3, GETDATE()))
 
 16.
+SELECT TOP 5 *
+FROM Product
+ORDER BY price DESC
+
+17.
