@@ -56,3 +56,7 @@ DELETE Product
 BETWEEN quantity < 100 AND price > 70
 
 13.
+DELETE Product 
+WHERE category = 'Снеки' OR category = 'Алкоголь'
+
+14.
