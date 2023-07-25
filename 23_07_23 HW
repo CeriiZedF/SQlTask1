@@ -60,3 +60,7 @@ DELETE Product
 WHERE category = 'Снеки' OR category = 'Алкоголь'
 
 14.
+DELETE Product 
+WHERE name LIKE '_____'
+
+15.
