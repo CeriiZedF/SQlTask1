@@ -52,3 +52,7 @@ UPDATE Product SET date_of_delivery = CONVERT(date, GETDATE())
 WHERE date_of_delivery IS NULL
 
 12.
+DELETE Product 
+BETWEEN quantity < 100 AND price > 70
+
+13.
