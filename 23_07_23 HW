@@ -48,3 +48,7 @@ ORDER BY price
 UPDATE Product SET price = (price * 0.95)
 
 11.
+UPDATE Product SET date_of_delivery = CONVERT(date, GETDATE())
+WHERE date_of_delivery IS NULL
+
+12.
