@@ -73,3 +73,5 @@ FROM Product
 ORDER BY price DESC
 
 17.
+DELETE Product
+WHERE producer IS NULL OR discount > 10
