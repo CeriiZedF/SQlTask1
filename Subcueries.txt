@@ -45,7 +45,7 @@ WHERE pr.id_address IN (SELECT a.id
 					                          FROM Region AS r
 								  WHERE r.id_country = (SELECT co.id
 											FROM Country AS co
-											WHERE co.id = (SELECT r.id_country  -- страна фирмы Простоквашино
+											WHERE co.id = (SELECT r.id_country
 												       FROM Region AS r
 												       WHERE r.id = (SELECT c.id_region
 													             FROM City AS c
@@ -66,7 +66,7 @@ WHERE EXISTS (SELECT p.id_producer
               FROM Product AS p
               WHERE pr.id = p.id_producer)
 GROUP BY pr.name
-HAVING COUNT(*) > (SELECT COUNT(*)  -- кол-во товаров 'ООО «Самтаймс»'
+HAVING COUNT(*) > (SELECT COUNT(*)
 	           FROM Product AS p
 		   WHERE p.id_producer IN (SELECT pr.id
 					   FROM Producer AS pr
@@ -89,16 +89,14 @@ ORDER BY 1 DESC
 и они не продавались вот уже три месяца)
 --------------------------------
 SELECT temp.category AS 'категория', COUNT(temp.name) AS 'количество товаров для списания'
-FROM  -- получаем таблицу товаров и их категории которые нужно списать
+FROM 
 (
-    -- все товары и их категории
     SELECT p.name, c.name AS 'category'
     FROM Product AS p
     JOIN Category AS c ON c.id = p.id_category
 
-    EXCEPT  -- отнимаем
+    EXCEPT 
 
-    -- товары которые продавались последние 3 месяца
     SELECT p.name, c.name AS 'category'
     FROM Product AS p
     JOIN Category AS c ON c.id = p.id_category
